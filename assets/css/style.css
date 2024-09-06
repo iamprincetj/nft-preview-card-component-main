@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Outfit-var";
+  src: url("/assets/Fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+  /* Primary */
+
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+
+  --main-bG: hsl(217, 54%, 11%);
+  --card-bG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--main-bG);
+  font-family: "Outfit-var";
+}
+
+#main-container {
+}
+
+.card-container {
+  background-color: var(--card-bG);
+  width: 90%;
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 1.8em 0;
+  border-radius: 1em;
+  box-sizing: border-box;
+}
+
+.card-sub-container {
+  width: 87%;
+  margin: 0 auto;
+}
+
+.card-container .main-image {
+  max-width: 100%;
+  height: 300px;
+  background-image: url("/assets/images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.7em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-container .main-image::before {
+  display: none;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 0.7em;
+}
+
+.main-image img {
+  display: none;
+}
+
+.card-container .main-image:hover::before,
+.card-container .main-image:hover > img {
+    display: block;
+}
+
+.heading {
+  color: var(--White);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0.5em 0;
+  cursor: pointer;
+}
+
+.heading:hover {
+    color: var(--Cyan);
+}
+
+.title {
+  color: var(--Softblue);
+  font-size: 1.1rem;
+  line-height: 1.5em;
+}
+
+.card-info {
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em 0;
+}
+
+.card-info .eth-container {
+  color: var(--Cyan);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.1rem;
+}
+
+.eth-container img,
+.time img {
+  margin-right: 0.3em;
+  vertical-align: top;
+}
+
+.card-info .time {
+  color: var(--Softblue);
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+.time img {
+  width: 20px;
+}
+
+.avatar-info {
+  display: flex;
+  padding-top: 1em;
+  line-height: 2rem;
+}
+
+.avatar-info img {
+  width: 40px;
+  border: 1px solid var(--White);
+  border-radius: 100%;
+  margin-right: 1em;
+  vertical-align: text-bottom;
+}
+
+.avatar-info p {
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.avatar-info p:hover {
+    color: var(--Cyan);
+}
+
+.avatar-info span {
+  color: var(--Softblue);
+}
+
+.attribution {
+  color: var(--White);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--Cyan);
+}
